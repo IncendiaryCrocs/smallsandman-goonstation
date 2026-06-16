@@ -5,4 +5,4 @@
 	wiki_link = "https://wiki.ss13.co/Cult"
 
 
-	New(datum/mind/new_owner)
+

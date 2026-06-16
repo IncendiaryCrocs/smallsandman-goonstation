@@ -6,6 +6,7 @@
 #define ROLE_SYNDICATE_COMMANDER "syndicate_commander"
 #define ROLE_VAMPIRE "vampire"
 #define ROLE_GANG_LEADER "gang_leader"
+#define ROLE_CULT_LEADER "cult_leader"
 #define ROLE_WIZARD "wizard"
 #define ROLE_CHANGELING "changeling"
 #define ROLE_WEREWOLF "werewolf"
@@ -29,6 +30,7 @@
 // special antagonist roles
 #define ROLE_MACHO_MAN "macho_man"
 #define ROLE_GANG_MEMBER "gang_member"
+#define ROLE_CULT_MEMBER "cult_member"
 #define ROLE_HUNTER "hunter"
 #define ROLE_WRESTLER "wrestler"
 #define ROLE_PHOENIX "space_phoenix"
