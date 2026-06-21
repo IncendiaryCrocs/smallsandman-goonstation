@@ -2134,6 +2134,7 @@
 #include "code\modules\speech\modules\listen\effects\skullbot.dm"
 #include "code\modules\speech\modules\listen\inputs\_input_module_parent.dm"
 #include "code\modules\speech\modules\listen\inputs\blobchat.dm"
+#include "code\modules\speech\modules\listen\inputs\cultchat.dm"
 #include "code\modules\speech\modules\listen\inputs\deadchat.dm"
 #include "code\modules\speech\modules\listen\inputs\dronechat.dm"
 #include "code\modules\speech\modules\listen\inputs\equipped.dm"
