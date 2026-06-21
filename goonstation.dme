@@ -2248,6 +2248,7 @@
 #include "code\modules\speech\phrase_log\phrase_log_cleaner.dm"
 #include "code\modules\speech\say_channels\_say_channel_parent.dm"
 #include "code\modules\speech\say_channels\blobchat.dm"
+#include "code\modules\speech\say_channels\cultchat.dm"
 #include "code\modules\speech\say_channels\deadchat.dm"
 #include "code\modules\speech\say_channels\dronechat.dm"
 #include "code\modules\speech\say_channels\equipped.dm"
