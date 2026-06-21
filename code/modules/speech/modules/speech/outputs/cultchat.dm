@@ -38,7 +38,7 @@
 /datum/speech_module/output/bundled/cultchat/cultleader
 	id = SPEECH_OUTPUT_CULTCHAT_CULTLEADER
 	role = " (LEADER)"
-	css_class = "vamp" // todo Change to custom
+	css_class = "cultleader" // todo Change to custom
 
 
 /datum/speech_module/output/bundled/cultchat/cultist
