@@ -55,6 +55,10 @@
 #define SPEECH_OUTPUT_THRALLCHAT_GLOBAL "global_thrallchat"
 #define SPEECH_OUTPUT_THRALLCHAT_THRALL "thrall_thrallchat"
 #define SPEECH_OUTPUT_THRALLCHAT_VAMPIRE "vampire_thrallchat"
+#define SPEECH_OUTPUT_CULTCHAT "cultchat"
+#define SPEECH_OUTPUT_CULTCHAT_CULTIST "cultist_cultchat"
+#define SPEECH_OUTPUT_CULTCHAT_CULTLEADER "cultleader_cultchat"
+#define SPEECH_OUTPUT_CULTCHAT_GLOBAL "global_cultchat"
 #define SPEECH_OUTPUT_WRAITHCHAT "wraithchat"
 #define SPEECH_OUTPUT_WRAITHCHAT_ADMIN "admin_wraithchat"
 #define SPEECH_OUTPUT_WRAITHCHAT_PLAGUE_RAT "plague_rat_wraithchat"
@@ -172,6 +176,7 @@
 #define SPEECH_PREFIX_RIGHT_HAND "right_hand"
 #define SPEECH_PREFIX_SILICON "silicon"
 #define SPEECH_PREFIX_THRALLCHAT "thrallchat"
+#define SPEECH_PREFIX_CULTCHAT "cultchat"
 #define SPEECH_PREFIX_WRAITHCHAT "wraithchat"
 
 
@@ -217,6 +222,8 @@
 #define LISTEN_INPUT_GHOSTLY_WHISPER "spooky"
 #define LISTEN_INPUT_THRALLCHAT "thrallchat"
 #define LISTEN_INPUT_THRALLCHAT_GLOBAL "global_thrallchat"
+#define LISTEN_INPUT_CULTCHAT "cultchat"
+#define LISTEN_INPUT_CULTCHAT_GLOBAL "global_cultchat"
 #define LISTEN_INPUT_WRAITHCHAT "wraithchat"
 
 
