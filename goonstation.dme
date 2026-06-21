@@ -2232,6 +2232,7 @@
 #include "code\modules\speech\modules\speech\outputs\spoken\subtle.dm"
 #include "code\modules\speech\modules\speech\prefixes\_prefix_module_parent.dm"
 #include "code\modules\speech\modules\speech\prefixes\ai_radio.dm"
+#include "code\modules\speech\modules\speech\prefixes\cultchat.dm"
 #include "code\modules\speech\modules\speech\prefixes\deadchat.dm"
 #include "code\modules\speech\modules\speech\prefixes\hivechat.dm"
 #include "code\modules\speech\modules\speech\prefixes\intercom.dm"
