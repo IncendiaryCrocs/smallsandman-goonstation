@@ -14,7 +14,8 @@
 	message.flags |= SAYFLAG_NO_MAPTEXT
 	// Whisper message under breath
 	var/datum/say_message/whispered_message = message.Copy()
-	PASS_MESSAGE_TO_SAY_CHANNEL(outloud_channel, whispered_message)
+	//PASS_MESSAGE_TO_SAY_CHANNEL(outloud_channel, whispered_message)
+	// Ignore Unused Warning! This is commented out so it works.
 
 	// Apply formatting to messages (similar to Thrallspeak)
 	var/mind_ref = ""
