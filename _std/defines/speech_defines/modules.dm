@@ -13,6 +13,10 @@
 
 //------------ Speech Outputs ------------//
 #define SPEECH_OUTPUT_BLOBCHAT "blobchat"
+#define SPEECH_OUTPUT_CULTCHAT "cultchat"
+#define SPEECH_OUTPUT_CULTCHAT_CULTIST "cultist_cultchat"
+#define SPEECH_OUTPUT_CULTCHAT_CULTLEADER "cultleader_cultchat"
+#define SPEECH_OUTPUT_CULTCHAT_GLOBAL "global_cultchat"
 #define SPEECH_OUTPUT_DEADCHAT "deadchat"
 #define SPEECH_OUTPUT_DEADCHAT_ADMIN "admin_deadchat"
 #define SPEECH_OUTPUT_DEADCHAT_ANNOUNCER "deadchat_announcer"
@@ -55,10 +59,6 @@
 #define SPEECH_OUTPUT_THRALLCHAT_GLOBAL "global_thrallchat"
 #define SPEECH_OUTPUT_THRALLCHAT_THRALL "thrall_thrallchat"
 #define SPEECH_OUTPUT_THRALLCHAT_VAMPIRE "vampire_thrallchat"
-#define SPEECH_OUTPUT_CULTCHAT "cultchat"
-#define SPEECH_OUTPUT_CULTCHAT_CULTIST "cultist_cultchat"
-#define SPEECH_OUTPUT_CULTCHAT_CULTLEADER "cultleader_cultchat"
-#define SPEECH_OUTPUT_CULTCHAT_GLOBAL "global_cultchat"
 #define SPEECH_OUTPUT_WRAITHCHAT "wraithchat"
 #define SPEECH_OUTPUT_WRAITHCHAT_ADMIN "admin_wraithchat"
 #define SPEECH_OUTPUT_WRAITHCHAT_PLAGUE_RAT "plague_rat_wraithchat"
@@ -164,6 +164,7 @@
 #define SPEECH_PREFIX_AI_RADIO_3 "ai_radio_3"
 #define SPEECH_PREFIX_AI_RADIO_DEFAULT "ai_radio_default"
 #define SPEECH_PREFIX_AI_RADIO_GENERAL "ai_radio_default_general"
+#define SPEECH_PREFIX_CULTCHAT "cultchat"
 #define SPEECH_PREFIX_DEADCHAT "deadchat"
 #define SPEECH_PREFIX_HIVECHAT "hivechat"
 #define SPEECH_PREFIX_INTERCOM "intercom"
@@ -176,12 +177,12 @@
 #define SPEECH_PREFIX_RIGHT_HAND "right_hand"
 #define SPEECH_PREFIX_SILICON "silicon"
 #define SPEECH_PREFIX_THRALLCHAT "thrallchat"
-#define SPEECH_PREFIX_CULTCHAT "cultchat"
 #define SPEECH_PREFIX_WRAITHCHAT "wraithchat"
 
 
 //------------ Listen Inputs ------------//
 #define LISTEN_INPUT_BLOBCHAT "blobchat"
+#define LISTEN_INPUT_CULTCHAT "cultchat"
 #define LISTEN_INPUT_DEADCHAT "deadchat"
 #define LISTEN_INPUT_DEADCHAT_ADMIN "admin_deadchat"
 #define LISTEN_INPUT_EARS "ears"
@@ -222,7 +223,6 @@
 #define LISTEN_INPUT_GHOSTLY_WHISPER "spooky"
 #define LISTEN_INPUT_THRALLCHAT "thrallchat"
 #define LISTEN_INPUT_THRALLCHAT_GLOBAL "global_thrallchat"
-#define LISTEN_INPUT_CULTCHAT "cultchat"
 #define LISTEN_INPUT_CULTCHAT_GLOBAL "global_cultchat"
 #define LISTEN_INPUT_WRAITHCHAT "wraithchat"
 
