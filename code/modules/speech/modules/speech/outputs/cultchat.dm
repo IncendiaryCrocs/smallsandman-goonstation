@@ -4,10 +4,19 @@
 	speech_prefix = SPEECH_PREFIX_CULTCHAT
 	var/role = ""
 	var/css_class = ""
+	var/datum/say_channel/outloud_channel
+
+/datum/speech_module/output/bundled/cultchat/New(datum/speech_module_tree/parent, subchannel)
+	. = ..()
+	src.outloud_channel = global.SpeechManager.GetSayChannelInstance(SAY_CHANNEL_OUTLOUD)
 
 /datum/speech_module/output/bundled/cultchat/process(datum/say_message/message)
 	message.flags |= SAYFLAG_NO_MAPTEXT
+	// Whisper message under breath
+	var/datum/say_message/whispered_message = message.Copy()
+	PASS_MESSAGE_TO_SAY_CHANNEL(outloud_channel, whispered_message)
 
+	// Apply formatting to messages (similar to Thrallspeak)
 	var/mind_ref = ""
 	if (ismob(message.speaker))
 		var/mob/mob_speaker = message.speaker
@@ -38,7 +47,7 @@
 /datum/speech_module/output/bundled/cultchat/cultleader
 	id = SPEECH_OUTPUT_CULTCHAT_CULTLEADER
 	role = " (LEADER)"
-	css_class = "cultleader" // todo Change to custom
+	css_class = "cultleader"
 
 
 /datum/speech_module/output/bundled/cultchat/cultist
