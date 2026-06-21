@@ -578,6 +578,19 @@ strong {
 .thrallsay .vamp.name {
   color: #ff0000;
 }
+
+.cultsay {
+  color:#B51D1D;
+  background-color: black;
+  font:italic;
+}
+
+.cultsay .cultleader.name {
+  color:red;
+  background-color: black;
+  font: bold;
+}
+
 .wraithsay {
   color: #5c00e6;
   background-color: #ffc8c8;
@@ -1188,6 +1201,16 @@ html.theme-dark .hivesay {
 html.theme-dark .thrallsay {
   color: white;
   background-color: #6f00a7;
+}
+html.theme-dark .cultsay {
+  color:#B51D1D;
+  background-color: black;
+  font:italic;
+}
+html.theme-dark .cultsay .cultleader.name {
+  color:red;
+  background-color: black;
+  font: bold;
 }
 html.theme-dark .wraithsay {
   color: #b27eff;
