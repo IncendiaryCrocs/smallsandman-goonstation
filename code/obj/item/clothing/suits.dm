@@ -1908,6 +1908,40 @@ TYPEINFO(/obj/item/clothing/suit/space/industrial/salvager)
 		..()
 		setProperty("chemprot", 10)
 
+/obj/item/clothing/suit/antagcult
+	name = "cultist robe" //placeholder
+	desc = "The unholy vestments of a cultist."
+	icon = 'icons/obj/clothing/overcoats/item_suit_gimmick.dmi'
+	wear_image_icon = 'icons/mob/clothing/overcoats/worn_suit_gimmick.dmi'
+	inhand_image_icon = 'icons/mob/inhand/overcoat/hand_suit_gimmick.dmi'
+	icon_state = "cultist" //placeholder
+	item_state = "cultist" //ditto
+	see_face = FALSE
+	magical = 1
+	wear_layer = MOB_FULL_SUIT_LAYER
+	c_flags = COVERSEYES | COVERSMOUTH | COVERSHAIR
+	body_parts_covered = TORSO|LEGS|ARMS
+	cant_drop = TRUE
+	cant_self_remove = TRUE
+
+	setupProperties()
+		..()
+		setProperty("coldprot", 20)
+		setProperty("heatprot", 20)
+		setProperty("chemprot", 10)
+	equipped(var/mob/user, var/slot)
+		if (slot == SLOT_WEAR_SUIT)
+			boutput(user, SPAN_ALERT("You summon a set of robes to hide your identity."))
+			user.ensure_speech_tree().AddSpeechModifier(SPEECH_MODIFIER_SHROUDED)
+			APPLY_ATOM_PROPERTY(user, PROP_MOB_NOEXAMINE, src, 3)
+		..()
+	unequipped(var/mob/user)
+		boutput(user, SPAN_ALERT("Your robes vanish, making you identifiable again."))
+		user.ensure_speech_tree().RemoveSpeechModifier(SPEECH_MODIFIER_SHROUDED)
+		REMOVE_ATOM_PROPERTY(user, PROP_MOB_NOEXAMINE, src)
+		// we should probably just delete the robe here
+		..()
+
 /obj/item/clothing/suit/wizrobe
 	name = "blue wizard robe"
 	desc = "A traditional blue wizard's robe. It lacks all the stars and moons and stuff on it though."
