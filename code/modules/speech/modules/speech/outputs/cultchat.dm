@@ -8,12 +8,12 @@
 
 /datum/speech_module/output/bundled/cultchat/New(datum/speech_module_tree/parent, subchannel)
 	. = ..()
-	src.outloud_channel = global.SpeechManager.GetSayChannelInstance(SAY_CHANNEL_OUTLOUD)
+	//src.outloud_channel = global.SpeechManager.GetSayChannelInstance(SAY_CHANNEL_OUTLOUD)
 
 /datum/speech_module/output/bundled/cultchat/process(datum/say_message/message)
 	message.flags |= SAYFLAG_NO_MAPTEXT
-	// Whisper message under breath
-	var/datum/say_message/whispered_message = message.Copy()
+	// Whisper message under breath (Current commented out because it doesn't work, but I want you to have a working vers now)
+	//var/datum/say_message/whispered_message = message.Copy()
 	//PASS_MESSAGE_TO_SAY_CHANNEL(outloud_channel, whispered_message)
 	// Ignore Unused Warning! This is commented out so it works.
 
