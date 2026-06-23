@@ -13,6 +13,10 @@
 
 //------------ Speech Outputs ------------//
 #define SPEECH_OUTPUT_BLOBCHAT "blobchat"
+#define SPEECH_OUTPUT_CULTCHAT "cultchat"
+#define SPEECH_OUTPUT_CULTCHAT_CULTIST "cultist_cultchat"
+#define SPEECH_OUTPUT_CULTCHAT_CULTLEADER "cultleader_cultchat"
+#define SPEECH_OUTPUT_CULTCHAT_GLOBAL "global_cultchat"
 #define SPEECH_OUTPUT_DEADCHAT "deadchat"
 #define SPEECH_OUTPUT_DEADCHAT_ADMIN "admin_deadchat"
 #define SPEECH_OUTPUT_DEADCHAT_ANNOUNCER "deadchat_announcer"
@@ -160,6 +164,7 @@
 #define SPEECH_PREFIX_AI_RADIO_3 "ai_radio_3"
 #define SPEECH_PREFIX_AI_RADIO_DEFAULT "ai_radio_default"
 #define SPEECH_PREFIX_AI_RADIO_GENERAL "ai_radio_default_general"
+#define SPEECH_PREFIX_CULTCHAT "cultchat"
 #define SPEECH_PREFIX_DEADCHAT "deadchat"
 #define SPEECH_PREFIX_HIVECHAT "hivechat"
 #define SPEECH_PREFIX_INTERCOM "intercom"
@@ -177,6 +182,7 @@
 
 //------------ Listen Inputs ------------//
 #define LISTEN_INPUT_BLOBCHAT "blobchat"
+#define LISTEN_INPUT_CULTCHAT "cultchat"
 #define LISTEN_INPUT_DEADCHAT "deadchat"
 #define LISTEN_INPUT_DEADCHAT_ADMIN "admin_deadchat"
 #define LISTEN_INPUT_EARS "ears"
@@ -217,6 +223,7 @@
 #define LISTEN_INPUT_GHOSTLY_WHISPER "spooky"
 #define LISTEN_INPUT_THRALLCHAT "thrallchat"
 #define LISTEN_INPUT_THRALLCHAT_GLOBAL "global_thrallchat"
+#define LISTEN_INPUT_CULTCHAT_GLOBAL "global_cultchat"
 #define LISTEN_INPUT_WRAITHCHAT "wraithchat"
 
 

@@ -38,6 +38,7 @@
 #endif
 
 // BEGIN_INCLUDE
+#include "_std\defines\roles.dm"
 #include "code\area.dm"
 #include "code\atom.dm"
 #include "code\client.dm"
@@ -879,6 +880,8 @@
 #include "code\modules\antagonists\changeling\abilities\stings.dm"
 #include "code\modules\antagonists\changeling\abilities\transform.dm"
 #include "code\modules\antagonists\conspirator\conspirator.dm"
+#include "code\modules\antagonists\cult\cult_leader.dm"
+#include "code\modules\antagonists\cult\cult_member.dm"
 #include "code\modules\antagonists\eldritch_madness\broken.dm"
 #include "code\modules\antagonists\flockmind\flockmind.dm"
 #include "code\modules\antagonists\flockmind\flocktrace.dm"
@@ -2135,6 +2138,7 @@
 #include "code\modules\speech\modules\listen\effects\skullbot.dm"
 #include "code\modules\speech\modules\listen\inputs\_input_module_parent.dm"
 #include "code\modules\speech\modules\listen\inputs\blobchat.dm"
+#include "code\modules\speech\modules\listen\inputs\cultchat.dm"
 #include "code\modules\speech\modules\listen\inputs\deadchat.dm"
 #include "code\modules\speech\modules\listen\inputs\dronechat.dm"
 #include "code\modules\speech\modules\listen\inputs\equipped.dm"
@@ -2203,6 +2207,7 @@
 #include "code\modules\speech\modules\speech\modifiers\mutantraces\zombie.dm"
 #include "code\modules\speech\modules\speech\outputs\_output_module_parent.dm"
 #include "code\modules\speech\modules\speech\outputs\blobchat.dm"
+#include "code\modules\speech\modules\speech\outputs\cultchat.dm"
 #include "code\modules\speech\modules\speech\outputs\deadchat.dm"
 #include "code\modules\speech\modules\speech\outputs\dronechat.dm"
 #include "code\modules\speech\modules\speech\outputs\equipped.dm"
@@ -2228,6 +2233,7 @@
 #include "code\modules\speech\modules\speech\outputs\spoken\subtle.dm"
 #include "code\modules\speech\modules\speech\prefixes\_prefix_module_parent.dm"
 #include "code\modules\speech\modules\speech\prefixes\ai_radio.dm"
+#include "code\modules\speech\modules\speech\prefixes\cultchat.dm"
 #include "code\modules\speech\modules\speech\prefixes\deadchat.dm"
 #include "code\modules\speech\modules\speech\prefixes\hivechat.dm"
 #include "code\modules\speech\modules\speech\prefixes\intercom.dm"
@@ -2244,6 +2250,7 @@
 #include "code\modules\speech\phrase_log\phrase_log_cleaner.dm"
 #include "code\modules\speech\say_channels\_say_channel_parent.dm"
 #include "code\modules\speech\say_channels\blobchat.dm"
+#include "code\modules\speech\say_channels\cultchat.dm"
 #include "code\modules\speech\say_channels\deadchat.dm"
 #include "code\modules\speech\say_channels\dronechat.dm"
 #include "code\modules\speech\say_channels\equipped.dm"

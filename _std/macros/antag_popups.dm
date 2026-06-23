@@ -30,6 +30,8 @@
 	<a href='byond://?src=\ref[src];action=[ROLE_WIZARD]'>Wizard</a> |
 	<a href='byond://?src=\ref[src];action=adminwizard'>Custom Wizard</a> |
 	<a href='byond://?src=\ref[src];action=polymorph'>Polymorph</a>
+	<a href='byond://?src=\ref[src];action=[ROLE_CULT_LEADER]'>Cult Leader</a>
+	<a href='byond://?src=\ref[src];action=[ROLE_CULT_MEMBER]'>Cult Member</a>
 </div>
 <div class='antagType' style='border-color:#AEC6CF'><b class='title' style='background:#AEC6CF'>Nuke/Rev</b>
 	<a href='byond://?src=\ref[src];action=[ROLE_NUKEOP]'>Nuke Op</a> |

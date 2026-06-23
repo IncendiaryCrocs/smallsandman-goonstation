@@ -125,6 +125,7 @@
 #define SAY_CHANNEL_GLOBAL_RADIO_DEFAULT_ONLY "global_radio_default"
 #define SAY_CHANNEL_GLOBAL_RADIO_UNPROTECTED_ONLY "global_radio_unprotected"
 #define SAY_CHANNEL_GLOBAL_THRALL "global_thrall"
+#define SAY_CHANNEL_GLOBAL_CULT "global_cult"
 #define SAY_CHANNEL_HIVEMIND "hivemind"
 #define SAY_CHANNEL_KUDZU "kudzu"
 #define SAY_CHANNEL_LOOC "looc"
@@ -134,4 +135,5 @@
 #define SAY_CHANNEL_OUTLOUD "outloud"
 #define SAY_CHANNEL_SILICON "silicon"
 #define SAY_CHANNEL_THRALL "thrall"
+#define SAY_CHANNEL_CULT "cult"
 #define SAY_CHANNEL_WRAITH "wraith"
