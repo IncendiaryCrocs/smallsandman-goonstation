@@ -25,6 +25,7 @@ var/list/admin_verbs = list(
 
 		/client/proc/cmd_admin_pm,
 		/client/proc/blobsay,
+		/client/proc/cultsay,
 		/client/proc/dronesay,
 		/client/proc/dsay,
 		/client/proc/flocksay,
