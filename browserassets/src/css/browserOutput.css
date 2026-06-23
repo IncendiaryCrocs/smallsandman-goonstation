@@ -573,10 +573,6 @@ strong {
   color:red;
   background-color: black;
 }
-.cultsay .spirit.name {
-  color:white;
-  background-color: black;
-}
 .deadsay {
   color: #5c00e6;
 }
@@ -1197,10 +1193,6 @@ html.theme-dark .cultsay {
 }
 html.theme-dark .cultsay .cultleader.name {
   color:red;
-  background-color: black;
-}
-html.theme-dark .cultsay .spirit.name {
-  color:white;
   background-color: black;
 }
 html.theme-dark .deadsay {
