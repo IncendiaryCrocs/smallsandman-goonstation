@@ -50,11 +50,9 @@
 	role = " (LEADER)"
 	css_class = "cultleader"
 
-
 /datum/speech_module/output/bundled/cultchat/cultist
 	id = SPEECH_OUTPUT_CULTCHAT_CULTIST
 	role = " (CULTIST)"
-
 
 /datum/speech_module/output/bundled/cultchat/global_cultchat
 	id = SPEECH_OUTPUT_CULTCHAT_GLOBAL

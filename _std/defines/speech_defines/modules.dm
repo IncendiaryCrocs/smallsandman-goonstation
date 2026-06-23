@@ -17,7 +17,6 @@
 #define SPEECH_OUTPUT_CULTCHAT "cultchat"
 #define SPEECH_OUTPUT_CULTCHAT_CULTIST "cultist_cultchat"
 #define SPEECH_OUTPUT_CULTCHAT_CULTLEADER "cultleader_cultchat"
-#define SPEECH_OUTPUT_CULTCHAT_SPIRIT "spirit_cultchat"
 #define SPEECH_OUTPUT_CULTCHAT_GLOBAL "global_cultchat"
 #define SPEECH_OUTPUT_DEADCHAT_ADMIN "admin_deadchat"
 #define SPEECH_OUTPUT_DEADCHAT_ANNOUNCER "deadchat_announcer"
