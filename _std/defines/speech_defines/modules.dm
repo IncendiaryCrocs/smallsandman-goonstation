@@ -183,6 +183,7 @@
 //------------ Listen Inputs ------------//
 #define LISTEN_INPUT_BLOBCHAT "blobchat"
 #define LISTEN_INPUT_CULTCHAT "cultchat"
+#define LISTEN_INPUT_CULTCHAT_GLOBAL "global_cultchat"
 #define LISTEN_INPUT_DEADCHAT "deadchat"
 #define LISTEN_INPUT_DEADCHAT_ADMIN "admin_deadchat"
 #define LISTEN_INPUT_EARS "ears"
@@ -223,7 +224,6 @@
 #define LISTEN_INPUT_GHOSTLY_WHISPER "spooky"
 #define LISTEN_INPUT_THRALLCHAT "thrallchat"
 #define LISTEN_INPUT_THRALLCHAT_GLOBAL "global_thrallchat"
-#define LISTEN_INPUT_CULTCHAT_GLOBAL "global_cultchat"
 #define LISTEN_INPUT_WRAITHCHAT "wraithchat"
 
 
