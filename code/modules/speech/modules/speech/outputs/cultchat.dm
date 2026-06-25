@@ -6,8 +6,8 @@
 	var/css_class = ""
 	var/datum/say_channel/outloud_channel
 
-/datum/speech_module/output/bundled/cultchat/New(datum/speech_module_tree/parent, subchannel)
-	. = ..()
+///datum/speech_module/output/bundled/cultchat/New(datum/speech_module_tree/parent, subchannel)
+	//. = ..()
 	//src.outloud_channel = global.SpeechManager.GetSayChannelInstance(SAY_CHANNEL_OUTLOUD)
 
 /datum/speech_module/output/bundled/cultchat/process(datum/say_message/message)
