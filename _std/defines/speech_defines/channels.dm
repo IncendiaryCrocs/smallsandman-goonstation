@@ -111,12 +111,14 @@
 
 //------------ Say Channels ------------//
 #define SAY_CHANNEL_BLOB "blob"
+#define SAY_CHANNEL_CULT "cult"
 #define SAY_CHANNEL_DEAD "deadchat"
 #define SAY_CHANNEL_EQUIPPED "equipped"
 #define SAY_CHANNEL_FLOCK "flock"
 #define SAY_CHANNEL_FLOCK_DISTORTED "distorted_flock"
 #define SAY_CHANNEL_GHOSTDRONE "ghostdrone"
 #define SAY_CHANNEL_GHOSTLY_WHISPER "ghostly_whisper"
+#define SAY_CHANNEL_GLOBAL_CULT "global_cult"
 #define SAY_CHANNEL_GLOBAL_FLOCK "global_flock"
 #define SAY_CHANNEL_GLOBAL_HIVEMIND "global_hivemind"
 #define SAY_CHANNEL_GLOBAL_LOOC "global_looc"

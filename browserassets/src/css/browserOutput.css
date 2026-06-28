@@ -565,6 +565,14 @@ strong {
 .bugsay {
   color: #ea5d17;
 }
+.cultsay {
+  color:#B51D1D;
+  background-color: black;
+}
+.cultsay .cultleader.name {
+  color:red;
+  background-color: black;
+}
 .deadsay {
   color: #5c00e6;
 }
@@ -1178,6 +1186,14 @@ html.theme-dark .blobsay {
 }
 html.theme-dark .bugsay {
   color: #ea5d17;
+}
+html.theme-dark .cultsay {
+  color:#B51D1D;
+  background-color: black;
+}
+html.theme-dark .cultsay .cultleader.name {
+  color:red;
+  background-color: black;
 }
 html.theme-dark .deadsay {
   color: #b27eff;
