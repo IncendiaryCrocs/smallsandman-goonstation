@@ -1922,9 +1922,7 @@ TYPEINFO(/obj/item/clothing/suit/space/industrial/salvager)
 	c_flags = COVERSEYES | COVERSMOUTH | COVERSHAIR
 	body_parts_covered = TORSO|LEGS|ARMS
 	cant_drop = TRUE
-	cant_self_remove = FALSE
-	speech_verb_say = "mutters"
-	speech_verb_exclaim = "shrieks"
+	cant_self_remove = FALSE // So you can either use the ability or take off the suit by hand to remove it (which should make it disappear, soon tm)
 
 	setupProperties()
 		..()
