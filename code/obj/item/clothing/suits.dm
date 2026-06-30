@@ -1911,18 +1911,20 @@ TYPEINFO(/obj/item/clothing/suit/space/industrial/salvager)
 /obj/item/clothing/suit/antagcult
 	name = "cultist robe" //placeholder
 	desc = "The garish, gruesome garments of a fearsome, fanatical follower..."
-	icon = 'icons/obj/clothing/overcoats/item_suit_gimmick.dmi'
-	wear_image_icon = 'icons/mob/clothing/overcoats/worn_cultantag.dmi'
+	icon = 'icons/obj/clothing/overcoats/item_suit_cult.dmi'
+	wear_image_icon = 'icons/mob/clothing/overcoats/worn_cult.dmi'
 	inhand_image_icon = 'icons/mob/inhand/overcoat/hand_suit_gimmick.dmi'
-	icon_state = "void-up" //placeholder
-	item_state = "void-up" //ditto
+	icon_state = "void" //placeholder
+	item_state = "void" //ditto
 	see_face = FALSE
 	magical = 1
 	wear_layer = MOB_FULL_SUIT_LAYER
 	c_flags = COVERSEYES | COVERSMOUTH | COVERSHAIR
 	body_parts_covered = TORSO|LEGS|ARMS
 	cant_drop = TRUE
-	cant_self_remove = TRUE
+	cant_self_remove = FALSE
+	speech_verb_say = "mutters"
+	speech_verb_exclaim = "shrieks"
 
 	setupProperties()
 		..()
