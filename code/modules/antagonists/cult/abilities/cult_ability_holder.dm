@@ -144,8 +144,16 @@
 	icon_state = "toggle_overlays" //placeholder
 	do_logs = FALSE
 	interrupt_action_bars = FALSE
+	var/obj/item/clothing/suit/antagcult/ability_robe // robe with the ability
+
+
+	New()
+		..()
+		ability_robe = new()
+
 
 	cast(mob/target)
+		..()
 		if (!holder)
 			return 1
 
@@ -157,9 +165,23 @@
 		if (!istype(M))
 			return 1
 
-		if (M.getStatusDuration("stunned") > 0 || M.getStatusDuration("knockdown") || M.getStatusDuration("unconscious") > 0 || !isalive(M) || M.restrained())
+		if (!ishuman(M))
+			boutput(M, SPAN_ALERT("You can't wear a cloak, you're not even a human, doofus!"))
+			return 1
+
+		if (M.getStatusDuration("stunned") > 0 || M.getStatusDuration("knockdown") > 0 || M.getStatusDuration("unconscious") > 0 || !isalive(M) || M.restrained())
 			boutput(M, SPAN_ALERT("Not when you're incapacitated or restrained."))
 			return 1
 
-		boutput(M, SPAN_ALERT("You are now wearing your robe."))
-		M.equip_new_if_possible(/obj/item/clothing/suit/antagcult, SLOT_WEAR_SUIT)
+
+		var/obj/item/current_suit = M.get_slot(SLOT_WEAR_SUIT)
+		if (current_suit == ability_robe) // Already wearing the robe, so unequip it.
+			boutput(M, SPAN_ALERT("The current slot is your robe, attempting to unequip it..."))
+			//M.autoequip_slot(null, SLOT_WEAR_SUIT) // Remove item ? I hope this works...
+			//M.drop_item(ability_robe, FALSE)
+			//M.drop_from_slot(SLOT_WEAR_SUIT, null, TRUE)
+			//M.put_in_hand_or_drop(ability_robe)
+			ability_robe.force_drop(M)
+		else
+			boutput(M, SPAN_ALERT("You summon your robe to you!"));
+			M.autoequip_slot(ability_robe, SLOT_WEAR_SUIT) // Swaps suit out, putting any other armor in your hand or on the ground.
