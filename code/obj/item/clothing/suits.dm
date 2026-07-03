@@ -1937,14 +1937,20 @@ TYPEINFO(/obj/item/clothing/suit/space/industrial/salvager)
 			APPLY_ATOM_PROPERTY(user, PROP_MOB_NOEXAMINE, src, 3)
 		..()
 	unequipped(var/mob/user)
+		..()
 		boutput(user, SPAN_ALERT("Your robes vanish, making you identifiable again."))
 		user.ensure_speech_tree().RemoveSpeechModifier(SPEECH_MODIFIER_SHROUDED)
 		REMOVE_ATOM_PROPERTY(user, PROP_MOB_NOEXAMINE, src)
 		if (is_summon == TRUE) // vanish (the ref is kept in cult_ability_holder so it doesn't GC)
 			src.visible_message(SPAN_SUBTLE("[user.name]'s [src.name] vanishes into thin air."))
-			M.drop_from_slot(in_uniform, null, TRUE)
-			set_loc(null)
-		..()
+			//user.drop_from_slot(src, null, TRUE)
+			//user.drop_item(src)
+			if (src in user.contents)
+				src.visible_message(SPAN_SUBTLE("Like,,,, genuinely tho"))
+				force_drop()
+				set_loc(null)
+
+			//src.force_drop(user)
 
 /obj/item/clothing/suit/wizrobe
 	name = "blue wizard robe"
