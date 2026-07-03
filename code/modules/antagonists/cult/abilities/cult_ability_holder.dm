@@ -144,8 +144,10 @@
 	icon_state = "toggle_overlays" //placeholder
 	do_logs = FALSE
 	interrupt_action_bars = FALSE
+	var/obj/item/clothing/suit/antagcult/ability_cloak
 
 	cast(mob/target)
+		..()
 		if (!holder)
 			return 1
 
@@ -157,9 +159,31 @@
 		if (!istype(M))
 			return 1
 
+		if (!ishuman(M))
+			boutput(M, SPAN_ALERT("You can't equip a cloak if you're not a humanoid, doofus!"))
+			return 1
+
 		if (M.getStatusDuration("stunned") > 0 || M.getStatusDuration("knockdown") || M.getStatusDuration("unconscious") > 0 || !isalive(M) || M.restrained())
 			boutput(M, SPAN_ALERT("Not when you're incapacitated or restrained."))
 			return 1
 
-		boutput(M, SPAN_ALERT("You are now wearing your robe."))
-		M.equip_new_if_possible(/obj/item/clothing/suit/antagcult, SLOT_WEAR_SUIT)
+		if (ability_cloak == null) // If no cloak exists, create a new one
+			ability_cloak = new()
+			ability_cloak.is_summon = TRUE
+
+		var/obj/in_uniform = M.get_slot(SLOT_WEAR_SUIT)
+		if (in_uniform == ability_cloak) // The cloak is equipped, so unequip it.
+			M.drop_from_slot(in_uniform, null, TRUE)
+			in_uniform.set_loc(null) // This happens here and in suit/antagcult (just to be safe, technically not needed here...)
+			boutput(M, SPAN_ALERT("Your robes vanish."))
+		else // Cloak not equipped, so swap it out.
+			//M.autoequip_slot(ability_cloak, SLOT_WEAR_SUIT)
+			//boutput(M, SPAN_ALERT("You cloak yourself, use the ability again or take off the cloak to remove it."))
+			SETUP_GENERIC_ACTIONBAR(M, M, 0.3 SECONDS, /datum/targetable/cult/summon_robe/proc/completed_cloaking, list(M, ability_cloak), src.icon, src.icon_state, null, null)
+
+	proc/completed_cloaking(var/mob/living/carbon/human/M, var/obj/item/clothing/suit/antagcult/ability_cloak)
+		if (!M)
+			return 1
+		M.autoequip_slot(ability_cloak, SLOT_WEAR_SUIT)
+		boutput(M, SPAN_ALERT("You cloak yourself, use the ability again or take off the cloak to remove it."))
+

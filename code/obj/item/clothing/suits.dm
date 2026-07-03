@@ -1921,8 +1921,9 @@ TYPEINFO(/obj/item/clothing/suit/space/industrial/salvager)
 	wear_layer = MOB_FULL_SUIT_LAYER
 	c_flags = COVERSEYES | COVERSMOUTH | COVERSHAIR
 	body_parts_covered = TORSO|LEGS|ARMS
-	cant_drop = TRUE
+	cant_drop = FALSE
 	cant_self_remove = FALSE // So you can either use the ability or take off the suit by hand to remove it (which should make it disappear, soon tm)
+	var/is_summon = FALSE // If true, this is part of the Summon Cloak ability, which makes it disappear if you take it off.
 
 	setupProperties()
 		..()
@@ -1939,7 +1940,10 @@ TYPEINFO(/obj/item/clothing/suit/space/industrial/salvager)
 		boutput(user, SPAN_ALERT("Your robes vanish, making you identifiable again."))
 		user.ensure_speech_tree().RemoveSpeechModifier(SPEECH_MODIFIER_SHROUDED)
 		REMOVE_ATOM_PROPERTY(user, PROP_MOB_NOEXAMINE, src)
-		// we should probably just delete the robe here
+		if (is_summon == TRUE) // vanish (the ref is kept in cult_ability_holder so it doesn't GC)
+			src.visible_message(SPAN_SUBTLE("[user.name]'s [src.name] vanishes into thin air."))
+			M.drop_from_slot(in_uniform, null, TRUE)
+			set_loc(null)
 		..()
 
 /obj/item/clothing/suit/wizrobe
