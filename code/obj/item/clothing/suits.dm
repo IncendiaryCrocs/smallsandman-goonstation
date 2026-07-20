@@ -1931,26 +1931,33 @@ TYPEINFO(/obj/item/clothing/suit/space/industrial/salvager)
 		setProperty("heatprot", 20)
 		setProperty("chemprot", 10)
 	equipped(var/mob/user, var/slot)
-		if (slot == SLOT_WEAR_SUIT)
-			boutput(user, SPAN_ALERT("You summon a set of robes to hide your identity."))
-			user.ensure_speech_tree().AddSpeechModifier(SPEECH_MODIFIER_SHROUDED)
-			APPLY_ATOM_PROPERTY(user, PROP_MOB_NOEXAMINE, src, 3)
 		..()
+		if (slot != SLOT_WEAR_SUIT)
+			return
+		boutput(user, SPAN_ALERT("You summon a set of robes to hide your identity."))
+		user.ensure_speech_tree().AddSpeechModifier(SPEECH_MODIFIER_SHROUDED)
+		APPLY_ATOM_PROPERTY(user, PROP_MOB_NOEXAMINE, src, 3)
 	unequipped(var/mob/user)
 		..()
+		if (user.get_slot_from_item(src) != SLOT_WEAR_SUIT) // Since it gets unequipped when you swap over, and dropped here, this gets called twice (so you need this check for the second time)
+			return
 		boutput(user, SPAN_ALERT("Your robes vanish, making you identifiable again."))
 		user.ensure_speech_tree().RemoveSpeechModifier(SPEECH_MODIFIER_SHROUDED)
 		REMOVE_ATOM_PROPERTY(user, PROP_MOB_NOEXAMINE, src)
 		if (is_summon == TRUE) // vanish (the ref is kept in cult_ability_holder so it doesn't GC)
 			src.visible_message(SPAN_SUBTLE("[user.name]'s [src.name] vanishes into thin air."))
-			//user.drop_from_slot(src, null, TRUE)
-			//user.drop_item(src)
 			if (src in user.contents)
-				src.visible_message(SPAN_SUBTLE("Like,,,, genuinely tho"))
-				force_drop()
-				set_loc(null)
+				var/mob/newPotentialHolder = src.loc // fuckkkk
+				newPotentialHolder.drop_item(src) // doesnt work
+				src.set_loc(null)
 
-			//src.force_drop(user)
+	attack_hand(var/mob/user)
+		var/mob/newPotentialHolder = src.loc
+		newPotentialHolder.drop_item(src)
+		src.set_loc(null)
+
+	item/attack_hand()
+
 
 /obj/item/clothing/suit/wizrobe
 	name = "blue wizard robe"

@@ -60,8 +60,8 @@
 
 
 /datum/targetable/cult
-	icon = 'icons/mob/gang_abilities.dmi' //placeholder
-	icon_state = "gang-template" //placeholder
+	icon = 'icons/mob/cult_ui.dmi' //placeholder
+	icon_state = "default" //placeholder
 	cooldown = 0
 	last_cast = 0
 	pointCost = 0
@@ -141,7 +141,6 @@
 /datum/targetable/cult/summon_robe
 	name = "Summon robe"
 	desc = "Summons your robe."
-	icon_state = "toggle_overlays" //placeholder
 	do_logs = FALSE
 	interrupt_action_bars = FALSE
 	var/obj/item/clothing/suit/antagcult/ability_cloak
