@@ -1925,8 +1925,10 @@ Attempts to put an item in the hand of a mob, if not possible then stow it, then
 		current.unequipped(src)
 		src.hud?.remove_item(current)
 		src.vars[slot] = null
-		if(!src.put_in_hand(current))
-			src.drop_from_slot(current, get_turf(current))
+
+		if (in_interact_range(current, src))
+			if(!src.put_in_hand(current))
+				src.drop_from_slot(current, get_turf(current))
 	src.force_equip(I, slot)
 	return TRUE
 
