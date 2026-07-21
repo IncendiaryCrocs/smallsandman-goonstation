@@ -618,10 +618,11 @@
 						O.show_message(SPAN_ALERT("<B>...and triggers it accidentally!</B>"), 1)
 
 				target.u_equip(I)
-				if (target.loc.open_inv_within)
-					I.set_loc(get_turf(source))
-				else
-					I.set_loc(target.loc)
+				if (in_interact_range(I, target)) // If object moves away during unequipped (ie, cultist cloak vanishes), don't sec loc
+					if (target.loc.open_inv_within)
+						I.set_loc(get_turf(source))
+					else
+						I.set_loc(target.loc)
 				I.dropped(target)
 				I.layer = initial(I.layer)
 				I.add_fingerprint(source)
